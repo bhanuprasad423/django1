@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Student data</title>
+    <style>
+      body {
+          font-family: Arial, sans-serif;
+      }
+      table {
+          width: 80%;
+          margin: 20px auto;
+          border-collapse: collapse;
+      }
+      th, td {
+          padding: 10px;
+          text-align: center;
+          border: 1px solid #ddd;
+      }
+      th {
+          background-color: #f2f2f2;
+      }    </style>
+  </head>
+  <body>
+    <h1>STUDENT DETAILS</h1>
+
+    <table>
+      <tbody>
+        <tr>
+          <th>SNAME</th>
+          <th>ROLL_NO</th>
+          <th>PHONE_NO</th>
+          <th>STD</th>
+          <th>DETAILS</th>
+        </tr>
+        {% for i in data %}
+        <tr>
+          <td>{{i.sname}}</td>
+          <td>{{i.roll_no}}</td>
+          <td>{{i.phone_no}}</td>
+          <td>{{i.standard}}</td>
+          {% if i.roll_no == 101 %}
+          <td><a href="{% url 'student1' %}">Details</a></td>
+          {% elif i.roll_no == 102 %}
+          <td><a href="{% url 'student2' %}">Details</a></td>
+          {% elif i.roll_no == 103 %}
+          <td><a href="{% url 'student3' %}">Details</a></td>
+          {% elif i.roll_no == 104 %}
+          <td><a href="{% url 'student4' %}">Details</a></td>
+          {% elif i.roll_no == 105 %}
+          <td><a href="{% url 'student5' %}">Details</a></td>
+          {% endif %}
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </body>
+</html>

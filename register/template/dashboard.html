@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+    {% load static %}
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Dashboard</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+  <style>
+
+    .p{
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        font-size: 30px;
+        text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+        background-color: cornflowerblue;
+
+    }
+</style>
+</head>
+<body>
+    <div class="container mt-5">
+        <div class="jumbotron" style="background-color: rgb(84, 172, 172);">
+        <div class="row">
+            <div class="col-md-12  mt-5 rounded text-center text-white p">Student Management System</div>
+        </div>
+        <hr>
+        <div class="form-group">
+            <form action="" class="form-inline" method="post">
+                <div class="input-group">
+                    <span class="input-group-addon">
+                        <i class="glyphicon glyphicon-search"></i></span>
+                        <input type="text" placeholder="Type here to Search" class="form-control" autocomplete="off">
+                </div>
+                <a href="{% url 'reg' %}" class="btn btn-outline bg-success rounded offset-md-4">Register</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <a href="{% url 'login' %}" class="btn btn-outline bg-success rounded">Login</a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <a href="{% url 'details' %}" class="btn btn-outline bg-success rounded">Details</a>
+
+    </div>
+</div>
+</div>
+</body>
+</html>

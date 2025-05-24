@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DETAILS</title>
+     <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Bootstrap JavaScript Bundle (includes Popper) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</head>
+<body> 
+    <div class="container mt-5">
+        <div class="row">
+            <div class="col-md-4">
+                <form action="" method="post">
+                    {% csrf_token%}
+               <table class="table table-bordered">
+                <thead class="table-dark">
+                    <tr>
+                        <th>NAME</th>
+                        <th>ROLL_NO</th>
+                        <th>PHONE_NO</th>
+                        <th>STANDARD</th>
+                        <th>SUBJECT1</th>
+                        <th>SUBJECT2</th>
+                        <th>SUBJECT3</th>
+                        <th>SUBJECT4</th>
+                        <th>SUBJECT5</th>
+                        <th>TOTAL</th>
+                        <th>PERCENTAGE</th>
+                    </tr>
+                </thead>
+                <tbody>
+                         {% for d1 in data %}
+                    
+                    <tr>
+                        <td>{{d1.sname}}</td>
+                        <td>{{d1.roll_no}}</td>
+                        <td>{{d1.phone_no}}</td>
+                        <td>{{d1.standard}}</td>
+                        <td>{{d1.sub1}}</td>
+                        <td>{{d1.sub2}}</td>
+                        <td>{{d1.sub3}}</td>
+                        <td>{{d1.sub4}}</td>
+                        <td>{{d1.sub5}}</td>
+                        <td>{{d1.total_marks}}</td>
+                        <td>{{d1.percentage}}</td>
+            
+
+                    </tr>
+              
+                        {% endfor %}
+
+                </tbody>
+               </table>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

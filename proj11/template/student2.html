@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student 2 Details</title>
+    <style>
+    body {
+            font-family: Arial, sans-serif;
+        }
+        table {
+            width: 80%;
+            margin: 20px auto;
+            border-collapse: collapse;
+        }
+        th, td {
+            padding: 10px;
+            text-align: center;
+            border: 1px solid #ddd;
+        }
+        th {
+            background-color: #f2f2f2;
+        }    
+    </style>
+</head>
+<body>
+
+    <h1 style="text-align: center;">Student 2 Details</h1>
+
+    <table>
+        <tr>
+            <th>Name</th>
+            <th>Roll Number</th>
+            <th>Phone Number</th>
+            <th>Standard</th>
+            <th>Total Marks</th>
+            <th>Percentage</th>
+            <th>Grade</th>
+        </tr>
+        {% for student in data %}
+            {% if student.roll_no == 102 %}
+            <tr>
+                <td>{{ student.sname }}</td>
+                <td>{{ student.roll_no }}</td>
+                <td>{{ student.phone_no }}</td>
+                <td>{{ student.standard }}</td>
+                <td>{{ student.total_marks }}</td>
+                <td>{{ student.percentage }}%</td>
+                <td>{{ student.grade }}</td>
+            </tr>
+            {% endif %}
+        {% endfor %}
+    </table>
+
+    <p style="text-align: center;"><a href="{% url 'student' %}">Back to Student List</a></p>
+
+</body>
+</html>

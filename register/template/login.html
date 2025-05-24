@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+    {% load static%}
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+</head>
+<body>
+    <div class="container mt-5 col-md-6">
+        <div class="jumbotron" style="background-color: rgb(84, 172, 172);">
+            <div class="row">
+                <div class="col text-center text-white rounded" style="background-color: cornflowerblue; text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5); font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; font-size: 30px;">Student Login</div>
+            </div>
+            <hr>
+            <div class="form-group">
+                <form action="" method="post">
+                    <div class="input-group rounded">
+                        <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+                        <input type="text" name="" id="" placeholder=" Enter the UserName" class="form-control">
+                    </div>
+                    <br><br>
+                    <div class="input-group rounded">
+                        <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
+                        <input type="text" name="" id="" placeholder=" Enter the password" class="form-control">
+                    </div>
+                    <br><br>
+                    <div class="input-group">
+                        <span class="input-group-addon"><i class="glyphicon glyphicon-ok"></i></span>
+                        <input type="text" name="" id="" placeholder=" Enter the confirm password" class="form-control">
+                    </div>
+                    <br><br>
+                    <a href="{% url 'dash' %}" class="btn btn-outline bg-danger rounded offset-md-3 text-white text-center">GO TO DASHBOARD</a>
+
+                </form>
+            </div>
+           
+        </div>
+    </div>
+</body>
+</html>

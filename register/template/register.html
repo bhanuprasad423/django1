@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+    {% load static%}
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+</head>
+<body>
+    <div class="container mt-5 col-md-6 ">
+        <div class="jumbotron " style="background-color: rgb(84, 172, 172);">
+            <div class="row">
+                <div class="col text-center text-white rounded" style="background-color: cornflowerblue; font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; font-size: 30px; text-transform: capitalize;  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);" > Register here</div>
+            </div>
+            <hr>
+            <div class="form-group">
+                <form action="" method="post">
+                    {% csrf_token %}
+                    
+                    {{form}}
+                    <br>
+                    <button class="btn btn-primary">Submit</button>
+                  <!-- <a href="{% url 'dash'%}" class="btn btn-outline bg-danger text-center text-white offset-md-2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Go to Dashboard &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a> -->
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

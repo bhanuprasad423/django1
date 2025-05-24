@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+</head>
+<body>
+  
+<div class="container mt-2 ">
+    <div class="jumbotron mt-2">
+    <div class="row ">
+        <div class="col " style="text-align: center; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; font-size: 30px;">Movie Details</div>
+    </div>
+
+      
+    {% if data3 %}
+
+     <div class="card mt-4 text-white " style="width: 35%; background-color: rgb(71, 66, 66);">
+
+            <img src="{{ data3.movie_frame.url}}" alt=""  style="width: 100%; height: 100%;" class="card-img-top">
+            <div class="class-body text-center ">
+                <h5 class="card-tile">{{data3.movie_name}}</h5>
+                <p class="card-text"><strong>Hero:</strong>{{data3.hero}}</p>
+                <p class="card-text"><strong>Director:</strong>{{data3.director}}</p>
+                <p class="card-text"><strong>Movie Budget:</strong>{{data3.budget}}</p>
+                <p class="card-text"><strong>Movie Rating:</strong>{{data3.rating}}</p>
+                <button class="btn btn-danger offset-1 rounded text-white"><a href="{% url 'remove1' data3.id %}" style="text-transform: none;">delete</a></button>
+            </div>
+        </div>
+
+
+
+{% endif%}
+
+ </div>
+</div>
+
+
+
+</body>
+</html>

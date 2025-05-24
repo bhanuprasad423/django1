@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SPMS Panel</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+</head>
+<body>
+<style>
+    .slidebar{
+    width: 220px;
+    height: 100vh;
+    background-color: black;
+    position: fixed;
+    left: 0%;
+    padding-top: 20px;
+}
+
+.sidebar-header h6 {
+    color: white;
+    font-size: 22px;
+    font-family: monospace;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.sidebar-menu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.sidebar-menu li {
+    color: white;
+    padding: 12px 20px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.sidebar-menu li:hover {
+    background-color: #333;
+}
+
+/* Topbar */
+.topbar {
+    margin-left: 240px;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    background-color: #f8f9fa;
+    height: 60px;
+}
+
+.logout-btn {
+    margin-left: 10px;
+}
+
+/* Main Content */
+.main-content {
+    margin-left: 240px;
+    padding: 20px;
+}
+
+/* Jumbotron */
+.jumbotron {
+    background-color: darkgray;
+    border-radius: 10px;
+    padding: 30px;
+}
+
+.card {
+    padding: 20px;
+    border-radius: 10px;
+    color: white;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.card-body h3 {
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+
+.card-body p {
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.bg-info {
+    background-color: #17a2b8 !important;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .slidebar {
+        width: 100%;
+        height: auto;
+        position: relative;
+    }
+    .topbar, .main-content {
+        margin-left: 0;
+    }
+}
+
+</style>
+    <div class="topbar">
+        <span>Welcome, Administrator</span>
+        <button class="btn btn-primary btn-sm logout-btn">Logout</button>
+    </div>
+
+    <div class="slidebar">
+        <div class="sidebar-header">
+            <h6><i class="fas fa-car"></i> SPMS Slidebar</h6>
+        </div>
+        <ul class="sidebar-menu">
+            <li><i class="fas fa-tachometer-alt"></i> Dashboard</li>
+            <li><i class="fas fa-list"></i> Category</li>
+            <li><i class="fas fa-car-side"></i> Vehicle Entry</li>
+            <li><i class="fas fa-tasks"></i> Manage Vehicle</li>
+            <li><i class="fas fa-file-alt"></i> Reports</li>
+            <li><i class="fas fa-search"></i> Search</li>
+            <li><i class="fas fa-user-cog"></i> Account Setting</li>
+            <li><i class="fas fa-sign-out-alt"></i> Logout</li>
+        </ul>
+    </div>
+
+    <div class="container-fluid main-content">
+        <div class="jumbotron">
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="card bg-info text-white">
+                        <div class="card-body">
+                            <h3>1</h3>
+                            <p>Vehicles Parked</p>
+                            <i class="fas fa-parking fa-2x"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="card bg-info text-white">
+                        <div class="card-body">
+                            <h3>2</h3>
+                            <p>Departed Vehicles</p>
+                            <i class="fas fa-car fa-2x"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="card bg-info text-white">
+                        <div class="card-body">
+                            <h3>6</h3>
+                            <p>Available Category</p>
+                            <i class="fa-solid fa-layer-group fa-2x"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="card bg-info text-white">
+                        <div class="card-body">
+                            <h3>$18.00</h3>
+                            <p>Total Earnings</p>
+                            <i class="fa-solid fa-sack-dollar fa-2x"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="card bg-info text-white">
+                        <div class="card-body">
+                            <h3>3</h3>
+                            <p>Total Records</p>
+                            <i class="fa-solid fa-folder-open fa-2x"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="card bg-info text-white">
+                        <div class="card-body">
+                            <h3>74</h3>
+                            <p>Total Parking Slots</p>
+                            <i class="fa-solid fa-check-double fa-2x"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

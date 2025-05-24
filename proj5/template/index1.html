@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <fieldset><legend>Database</legend>
+        <center>
+        <table border="1px">
+            <tr>
+                <th>Eid</th>
+                <th>Ename</th>
+                <th>Salary</th>
+                <th>Company</th>
+            </tr>
+            {% for d1 in data%}
+            <tr>
+                <td>{{d1.eid}}</td>
+                <td>{{d1.ename}}</td>
+                <td>{{d1.sal}}</td>
+                <td>{{d1.company}}</td>
+                {% endfor %}
+            </tr>
+        </table>
+    </center>
+    </fieldset>
+</body>
+</html>

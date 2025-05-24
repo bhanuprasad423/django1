@@ -1,0 +1,29 @@
+.A{
+    background-color: rgb(87, 87, 232);
+    color: black;
+    font-family: monospace;
+    font-size: 20px;
+    /* margin: 20px;
+    padding: 20px;
+    border: 50px;
+    border-radius: 15px; */
+}
+
+td{
+    text-align: center;
+  }table,td,th{
+      border: 1px solid black;
+      border-collapse: collapse ;
+  }
+  table{
+      width: 50%;
+      height: 40px;
+  }
+ 
+
+.B{
+    background-color:darkgray;
+    color: black;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 20px;
+}

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static 'css\a.css' %}">
+    
+</head>
+<body >
+    <hr>
+        <h1>Welcome to Django_Project</h1>
+        <hr><hr>
+        <img src="{% static 'images\Retro3.jpg' %}" alt="" height="100px" width="100px">
+        <img src="{% static 'images\Retro3.jpg' %}" alt="" height="100px" width="100px">
+        <img src="{% static 'images\Retro3.jpg' %}" alt="" height="100px" width="100px">
+        <img src="{% static 'images\Retro3.jpg' %}" alt="" height="100px" width="100px">
+        <img src="{% static 'images\Retro3.jpg' %}" alt="" height="100px" width="100px">
+        <hr><hr>
+        <fieldset>
+            <legend>Login_Here</legend>
+            <center>
+        <form action="" method="post">
+            <label for="">UserName:</label>
+            <input type="text" placeholder="Enter the username">
+            <br><br>
+            <label for="">Password:</label>
+            <input type="text" name="" id="" placeholder="Enter the Password">
+            <br><br>
+            <input type="submit" name="" id="" value="Login">
+        </form>
+    </center>
+    </fieldset>
+    {% block content%}
+    {% endblock %}
+</body>
+</html>

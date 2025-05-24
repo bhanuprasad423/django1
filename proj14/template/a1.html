@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <style>
+       .a{
+        background-color: skyblue;
+       }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="jumbotron">
+    <form action="{% url 'dash' %}" method="post">
+        {% csrf_token %}
+        <label for="" class="a">username</label>
+        <input type="text" placeholder="enter name here" name="username"><br>
+        <label for="" class="a">password</label>
+        <input type="text" placeholder="enter password here" name="password"><br>
+        <button class="btn btn-primary">LOGIN</button>
+    </form>
+</div>
+</div>
+</body>
+</html>

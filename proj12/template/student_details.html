@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All students</title>
+</head>
+<body>
+    <table border="1px">
+        <tr>
+        <th>NAME</th>
+        <th>ROLL NO</th>
+        <th>ADDRESS</th>
+        <th>PHONE NUMBER</th>
+        <!-- <th>PERCENTAGE</th> -->
+        <th>STANDARD</th>
+        <th>SUB1</th>
+        <th>SUB2</th>
+        <th>SUB3</th>
+        <th>SUB4</th>
+        <th>SUB5</th>
+    </tr>
+
+    {% for s in data %}
+    <tr>
+        <td>{{s.stu_name}}</td>
+        <td>{{s.stu_rollno}}</td>
+        <td>{{s.stu_addr}}</td>
+        <td>{{s.stu_phone}}</td>
+        <td>{{s.standard}}</td>
+        <td>{{s.sub1}}</td>
+        <td>{{s.sub2}}</td>
+        <td>{{s.sub3}}</td>
+        <td>{{s.sub4}}</td>
+        <td>{{s.sub5}}</td>
+    </tr>
+    {% endfor %}
+    </table>
+</body>
+</html>

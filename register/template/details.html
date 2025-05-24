@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+    {% load static%}
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student|Details</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+      <style>
+        .c:hover{
+            background-color: red;
+        }
+      </style>
+</head>
+<body>
+    <div class="container mt-5">
+        <div class="jumbotron" style="background-color:  rgb(84, 172, 172);">
+            <div class="row">
+                <div class="col text-white text-center rounded" style="background-color: cornflowerblue; font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; font-size: 30px;">Student Details</div>
+            </div>
+            <hr>
+            <table class="table table-bordered table-striped table-hover c">
+                <tr>
+                    <th>RollNo</th>
+                    <th>Name</th>
+                    <th>Student class</th>
+                    <th>Phone number</th>
+                    <th>Address</th>
+                    <th>Delete_Record</th>
+                </tr>
+                {% for d1 in data%}
+                <tbody>
+                    <tr>
+                        <td>{{d1.rollno}}</td>
+                        <td>{{d1.name}}</td>
+                        <td>{{d1.stu_class}}</td>
+                        <td>{{d1.phone_no}}</td>
+                        <td>{{d1.address}}</td>
+                    </tr>
+                </tbody>
+                {% endfor %}
+            </table>
+            <br><br>
+            <a href="{% url 'dash' %}" class="btn btn-success rounded ">GO TO DASHBOARD</a>
+        </div>
+    </div>
+    
+</body>
+</html>

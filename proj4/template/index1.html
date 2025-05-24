@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static 'css\demo.css' %}">
+</head>
+<body>
+    <main>
+    {% block content %}
+    <center>
+        <form method="post" action="{% url 'filter' %}">
+            <label>search:</label>
+            {% csrf_token %}
+        <input type="text" placeholder="search here" name="x">
+    </form>
+        <table border="1">
+            <tr class="A">
+        <th>id</th>
+        <th>name</th>
+        <th>address</th>
+        <th>age</th>
+            </tr>
+{%  for d1 in data %}
+<tr class="B">
+<td>{{d1.id}}</td>
+<td>{{d1.name}}</td>
+<td>{{d1.address}}</td>
+<td>{{d1.age}}</td>
+</tr>
+{% endfor %}
+        </table>
+    </center>   
+{% if abc %}
+
+{%for i in abc %}
+{{i.id}}
+{{i.name}}
+{{i.address}}
+{{i.age}}
+{% endfor %}
+{% endif %}
+{% endblock %}
+</main>
+</body>
+</html>

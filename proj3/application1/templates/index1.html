@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+    {% load static %}
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Welcome to app store
+    </h1>
+    <hr><hr>
+    <center>
+    <table border="1">
+        <tr><th>pid</th>
+        <th>pname</th>
+        <th>price</th>
+        <th>company</th>
+    </tr>
+    {% for d1 in data %}
+    <tr>
+        <td>{{d1.pid}}</td>
+        <td>{{d1.pname}}</td>
+        <td>{{d1.price}}</td>
+        <td>{{d1.company}}</td>
+    </tr>
+    {% endfor %}
+    </table>
+</center>
+</body>
+</html>
